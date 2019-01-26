@@ -1,0 +1,60 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+
+body {
+      font-family: "Helvetica Neue",sans-serif;
+      font-weight: lighter;
+}
+
+header {
+      width: 100%;
+      height: 100vh;
+      background: url(hero.jpg) no-repeat 50% 50%;
+      background-size: cover;
+      background-color: rgba(255, 255, 255, 0.2);
+      position: relative;
+}
+
+.inner-container{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    height:auto;
+    margin-top: 200px;
+    overflow: hidden;
+}
+
+h1, h2, h3{
+  /*color: #7d2d2d;*/
+  color: #5C0923;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.inner-container h1{
+  font-size: 5em;
+  font-family: "Shadows into Light", sans-serif;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 18px;
+    width: 200px;
+    font-weight: bold;
+    padding: 10px;
+    color: #000;
+    border: 3px solid #000;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.btn:hover,.btn:active{
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
