@@ -1,19 +1,62 @@
+
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
   src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN_r8OUuhs.ttf) format('truetype');
 }
+
 .flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 * {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+ol, ul {
+  list-style: none;
+}
+
+@media screen and (max-width: 480px) {
+
+  html, body {
+    min-width: 320px;
+  }
+}
+@media screen and (max-width: 1680px) {
+
+  body {
+    font-size: 1.05em;
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+  body {
+    font-size: 1.05em;
+  }
+
+}
+
+@media screen and (max-width: 980px) {
+
+  body {
+    font-size: 1em;
+  }
+
+}
+
 a,
 a:visited,
 a:hover,
@@ -201,3 +244,142 @@ h1 {
   background: #e5e5e5;
   transition: width 0.4s ease;
 }
+
+/*BANNER*/
+
+#banner {
+  padding: 11em 0 11em 0;
+  background: url(../dominos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 15% left;
+  text-align: left;
+  position: relative;
+}
+
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+	appearance: none;
+	-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  border-radius: 0;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: .8em;
+  font-weight: 700;
+  height: 3.5em;
+  line-height: 3.65em;
+  padding: 0 2.25em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  	}
+
+    .button:hover {
+      text-decoration: none;
+    }
+
+    .button {
+      background-color: #5a5a5a;
+      color: #ffffff !important;
+    }
+
+    .button:hover {
+      background-color: #676767;
+    }
+
+    ul.actions li {
+      padding: 2em 1em 0 0;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .actions{
+      text-decoration: none;
+    }
+
+		#banner a {
+			color: #ffffff;
+		}
+
+    #banner h1 {
+      font-size: 2em;
+      margin: 0 0 1em 0;
+      padding: 0;
+      letter-spacing: 3px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+      #banner h1 span {
+        font-weight: 400;
+      }
+
+      #banner .inner {
+        max-width: 65em;
+        width: calc(100% - 6em);
+        margin: 0 auto;
+        position: relative;
+        line-height: 1.5;
+      }
+
+      @media screen and (max-width: 480px) {
+
+        #banner .inner {
+          max-width: 90%;
+          width: 90%;
+        }
+
+      }
+      @media screen and (max-width: 1680px) {
+
+        #banner {
+          padding: 10em 0 8em 0;
+        }
+
+      }
+      @media screen and (max-width: 1280px) {
+
+  			#banner {
+  				padding: 8em 0 6em 0;
+  			}
+
+  		}
+
+  		@media screen and (max-width: 980px) {
+
+  			#banner {
+  				padding: 12em 0 10em 0;
+  			}
+
+  		}
+
+  		@media screen and (max-width: 736px) {
+
+  			#banner {
+  				padding: 4em 0 2em 0;
+  			}
+
+  				#banner h1 {
+  					font-size: 1.75em;
+  				}
+
+  		}
+
+  		@media screen and (max-width: 480px) {
+
+  			#banner {
+  				padding: 5em 0 3em 0;
+  			}
+
+  				#banner ul {
+  					margin-top: 1em;
+  				}
+
+  		}
