@@ -180,8 +180,8 @@ h1 {
   justify-content: center;
 }
 .outer-menu .menu > div {
-  width: 200vw;
-  height: 200vw;
+  width: 250vw;
+  height: 250vw;
   color: #FEFEFE;
   background: rgba(41, 98, 255, 0.97);
   border-radius: 50%;
