@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.0/jquery.cookie.min.js"></script>
+  <script src="js/nav.js"></script>
 </head>
 <body>
 
 <!--navigation bar-->
 <div class="outer-menu">
-  <input class="checkbox-toggle" type="checkbox" />
+  <input id="checkBox" class="checkbox-toggle" type="checkbox" autocomplete="on"/>
   <div class="hamburger">
     <div></div>
   </div>
@@ -63,6 +66,22 @@
         </div>
       </div>
     </div>
+
+  <script>
+    $('#checkBox').click(function(e){
+      if (e.target.checked) {
+        localStorage.checked = true;
+      } else {
+        localStorage.checked = false;
+      }
+    })
+
+    $( document ).ready(function() {
+
+      document.querySelector('#checkBox').checked = localStorage.checked;
+
+    });
+    </script>
 
 </body>
 </html>
