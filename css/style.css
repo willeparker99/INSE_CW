@@ -382,7 +382,12 @@ ul.actions li {
 
 }
 /*Search bar*/
-
+#search {
+  display: block;
+  padding: 15px 15px;
+  margin-bottom: 10px;
+  background: #fff;
+}
 
 /*Container*/
 .container {
