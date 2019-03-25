@@ -248,7 +248,7 @@ h1 {
 
 #banner {
   padding: 11em 0 11em 0;
-  background: url(../dominos.jpg);
+  background: url(../img/homeBanner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 15% left;
@@ -313,6 +313,7 @@ ul.actions li {
   letter-spacing: 3px;
   font-weight: 700;
   color: #fff;
+  text-shadow: 1px 1px 1px #000;
 }
 
 #banner h1 span {
