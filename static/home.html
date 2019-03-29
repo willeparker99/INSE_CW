@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentDeals</title>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.0/jquery.cookie.min.js"></script>
+  <script type="text/javascript" src="../js/search.js"></script>
+  <script src="../js/nav.js"></script>
+</head>
+<body>
+
+  <!--navigation bar-->
+  <div class="outer-menu">
+    <input id="checkBox" class="checkbox-toggle" type="checkbox" autocomplete="on"/>
+    <div class="hamburger">
+      <div></div>
+    </div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="home.html">home</a></li>
+            <li><a href="#">login</a></li>
+            <li><a href="#">register</a></li>
+            <li><a href="#">about</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Banner Hot Deal -->
+  <section id="banner">
+    <div class="inner">
+      <h1>Hot Deal of the day: <span>Dominos buy 1 get 10 free :D</span></h1>
+      <ul class="actions">
+        <li><a href="#" class="button alt">Get Deal</a></li>
+      </ul>
+    </div>
+  </section>
+  <!--Main Content -->
+  <div class="content-section content-gray-bg">
+    <div class="container">
+      <!--Search Bar-->
+
+      <input type="text" placeholder="Search.." id="search">
+
+      <div class="row">
+        <!--First Deal-->
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <a href="#" class="deal-item deal1 animated fadeInDown">
+            <figure>
+              <div class="overlay"><i></i></div>
+              <img src="../img/dominos.jpg" alt="dominos" class="img-responsive">
+            </figure>
+            <div class="deal-text">
+              <h2>Dominos</h2>
+
+              <p class="discount"><span>10%</span> <span>- 50%</span></p>
+            </div>
+          </a>
+        </div>
+
+        <!--Second Deal-->
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <a href="#" class="deal-item deal2 animated fadeInDown">
+            <figure>
+              <div class="overlay"><i></i></div>
+              <img src="../img/asos.jpg" alt="Asos" class="img-responsive">
+            </figure>
+            <div class="deal-text">
+              <h2>Asos Fashion</h2>
+
+              <p class="discount"><span>10%</span> <span>- 50%</span></p>
+            </div>
+          </a>
+        </div>
+
+        <!--Third Deal-->
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <a href="#" class="deal-item deal3 animated fadeInDown">
+            <figure>
+              <div class="overlay"><i></i></div>
+              <img src="../img/spotify.jpg" alt="Spotify" class="img-responsive">
+            </figure>
+            <div class="deal-text">
+              <h2>Spotify music</h2>
+
+              <p class="discount"><span>10%</span> <span>- 50%</span></p>
+            </div>
+          </a>
+        </div>
+        <!--Fourth Deal-->
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <a href="#" class="deal-item deal4 animated fadeInDown">
+            <figure>
+              <div class="overlay"><i></i></div>
+              <img src="../img/pizzahut.png" alt="Pizza Hut" class="img-responsive">
+            </figure>
+            <div class="deal-text">
+              <h2>Pizza hut</h2>
+
+              <p class="discount"><span>10%</span> <span>- 50%</span></p>
+            </div>
+          </a>
+        </div>
+
+        <!--fifth Deal-->
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <a href="#" class="deal-item deal5 animated fadeInDown">
+            <figure>
+              <div class="overlay"><i></i></div>
+              <img src="../img/jd.jpg" alt="JD" class="img-responsive">
+            </figure>
+            <div class="deal-text">
+              <h2>JD Fashion</h2>
+
+              <p class="discount"><span>10%</span> <span>- 50%</span></p>
+            </div>
+          </a>
+        </div>
+
+        <!--6th Deal-->
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <a href="#" class="deal-item deal6 animated fadeInDown">
+            <figure>
+              <div class="overlay"><i></i></div>
+              <img src="../img/footasylum.png" alt="Footasylum" class="img-responsive">
+            </figure>
+            <div class="deal-text">
+              <h2>Footasylum</h2>
+
+              <p class="discount"><span>10%</span> <span>- 50%</span></p>
+            </div>
+          </a>
+        </div>
+        <!--7th Deal-->
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <a href="#" class="deal-item deal7 animated fadeInDown">
+            <figure>
+              <div class="overlay"><i></i></div>
+              <img src="../img/sky.jpg" alt="Sky Media" class="img-responsive">
+            </figure>
+            <div class="deal-text">
+              <h2>Sky Media</h2>
+
+              <p class="discount"><span>10%</span> <span>- 50%</span></p>
+            </div>
+          </a>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+<!-- <script>
+$('#checkBox').click(function(e){
+  if (e.target.checked) {
+    localStorage.checked = true;
+  } else {
+    localStorage.checked = false;
+  }
+})
+
+$( document ).ready(function() {
+
+  document.querySelector('#checkBox').checked = localStorage.checked;
+
+});
+</script> -->
+
+</body>
+</html>

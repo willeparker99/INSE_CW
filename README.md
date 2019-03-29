@@ -7,3 +7,12 @@ Introduction to Software Engineering unit
 randomraf = UP841105  
 charlie-s1 = up867907
 AthosCosta = UP808096
+Willeparker99 = UP861063
+Zakcavill = UP866235
+
+## todo:
+- add authentication
+- add favs
+- share button
+- notifications
+- 

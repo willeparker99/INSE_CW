@@ -1,0 +1,23 @@
+{
+  "name": "inse_cw",
+  "version": "1.0.0",
+  "description": "A student deals app",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "null",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willeparker99/INSE_CW.git"
+  },
+  "author": "randomraf_UP841105, charlie-s1_UP867907, AthosCosta_UP808096, willeparker99_UP861063",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willeparker99/INSE_CW/issues"
+  },
+  "homepage": "https://github.com/willeparker99/INSE_CW#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
