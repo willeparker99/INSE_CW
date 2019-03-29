@@ -251,8 +251,7 @@ h1 {
   background: url(../../img/homeBanner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-positio
-  n: 15% left;
+  background-position: 15% left;
   text-align: left;
   position: relative;
 }
