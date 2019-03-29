@@ -1,0 +1,84 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+
+body {
+      font-family: "Helvetica Neue",sans-serif;
+      font-weight: lighter;
+}
+
+header {
+      width: 100%;
+      height: 100vh;
+      background: url(img/hero.jpg) no-repeat 50% 50%;
+      background-size: cover;
+      background-color: rgba(255, 255, 255, 0.2);
+      position: relative;
+}
+
+.inner-container{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    height:auto;
+    margin-top: 200px;
+    overflow: hidden;
+    -webkit-animation-delay: 1000ms;
+    -moz-animation-delay: 1000ms;
+    animation-delay: 1000ms;
+}
+
+h1, h2, h3{
+  /*color: #7d2d2d;*/
+  color: #5C0923;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+h1{
+  -webkit-animation-delay: 1300ms;
+  -moz-animation-delay: 1300ms;
+  animation-delay: 1300ms;
+}
+
+h2{
+  -webkit-animation-delay: 1600ms;
+  -moz-animation-delay: 1600ms;
+  animation-delay: 1600ms;
+}
+
+h3{
+  -webkit-animation-delay: 1900ms;
+  -moz-animation-delay: 1900ms;
+  animation-delay: 1900ms;
+}
+.inner-container h1{
+  font-size: 5em;
+  font-family: "Shadows into Light", sans-serif;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 18px;
+    width: 200px;
+    font-weight: bold;
+    padding: 10px;
+    color: #000;
+    border: 3px solid #000;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    -webkit-animation-delay: 2200ms;
+    -moz-animation-delay: 2200ms;
+    animation-delay: 2200ms;
+}
+
+.btn:hover,.btn:active{
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
