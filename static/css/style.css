@@ -248,7 +248,7 @@ h1 {
 
 #banner {
   padding: 11em 0 11em 0;
-  background: url(../../img/homeBanner.jpg);
+  background: url(../img/homeBanner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 15% left;
