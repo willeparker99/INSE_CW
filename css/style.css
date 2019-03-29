@@ -561,3 +561,28 @@ ul.actions li {
   -moz-animation-delay: 700ms;
   animation-delay: 700ms;
 }
+.deal8{
+  -webkit-animation-delay: 800ms;
+  -moz-animation-delay: 800ms;
+  animation-delay: 800ms;
+}
+.deal9{
+  -webkit-animation-delay: 900ms;
+  -moz-animation-delay: 900ms;
+  animation-delay: 900ms;
+}
+.deal10{
+  -webkit-animation-delay: 1000ms;
+  -moz-animation-delay: 1000ms;
+  animation-delay: 1000ms;
+}
+.deal11{
+  -webkit-animation-delay: 1100ms;
+  -moz-animation-delay: 1100ms;
+  animation-delay: 1100ms;
+}
+.deal12{
+  -webkit-animation-delay: 1200ms;
+  -moz-animation-delay: 1200ms;
+  animation-delay: 1200ms;
+}
