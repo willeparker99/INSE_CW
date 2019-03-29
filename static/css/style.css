@@ -327,6 +327,13 @@ ul.actions li {
   position: relative;
   line-height: 1.5;
 }
+.fav{
+  width:100px;
+  margin:auto;
+}
+.fav p{
+  float:left;
+}
 
 @media screen and (max-width: 480px) {
 
