@@ -1,0 +1,141 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Fira Sans', sans-serif;
+}
+.header {
+	height: 44px;
+	position: relative;
+	border-bottom: 1px solid #ddd;
+	z-index: 3;
+	background-color: #fff;
+	background-color: #f2f2f2;
+}
+.notification-trigger {
+	color: #333;
+	position: relative;
+	text-decoration: none;
+	float: right;
+	margin: 12px 30px 0 0;
+	font-size: 20px;
+	color: #333;
+}
+.notification-trigger .notification-num {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 16px;
+	display: block;
+	background: #d9232b;
+	color: #fff;
+	top: -4px;
+	right: -11px;
+	font-size: 10px;
+}
+.panel {
+	width: 100%;
+    height: 100%;
+	position: absolute;
+    padding: 44px 0 0 0;
+	top: 0;
+	background-color: #f3f2ec;
+	display: none;
+    z-index: 2;
+}
+.panel.visible {
+	display: block;
+}
+.panel .title {
+    position: absolute;
+    background-color: #fff;
+    color: #484846;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    z-index: 3;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .panel {
+        width: 300px;
+        right: 0;
+        border: 1px solid #ddd;
+        box-shadow: -1px 0px 1px #e0ded5;
+    }
+}
+
+ul.notification-bar {
+  list-style: none;
+  padding: 60px 10px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.notification-bar li:not(:first-child) {
+  margin-top: 60px;
+}
+.notification-bar li div {
+  margin-left: 50px;
+  margin-top: -40px;
+  border: 1px solid #c7c6c2;
+  padding: 10px;
+  background-color: #eeede8;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #7b7a76;
+  box-shadow: 1px 1px 2px #dedcd4;
+}
+.notification-bar li i {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  border: 2px solid #008dcb;
+  border-radius: 100%;
+  background-color: white;
+  color: #008dcb;
+}
+.notification-bar li.unread i {
+	background-color: #008dcb;
+	color: #fff;
+}
+.notification-bar li.unread div {
+	border-color: #008dcb;
+	background-color: #008dcb;
+	color: #fff;
+}
+.notification-bar li i:after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  position: absolute;
+  background-color: #ddd;
+  margin-top: 8px;
+  z-index: -1;
+}
+.notification-bar:after {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background-color: #deddd5;
+  position: absolute;
+  top: 0;
+  left: 28px;
+  z-index: -1;
+}
+.content {
+	text-align: center;
+}
+h1 {
+	font-weight: 300;
+}

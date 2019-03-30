@@ -7,10 +7,12 @@
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/notificatiion.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.0/jquery.cookie.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <script src="js/nav.js"></script>
+  <script src="js/notification.js"></script>
 </head>
 <body>
 
@@ -33,6 +35,54 @@
       </div>
     </div>
   </div>
+
+  <html>
+    <head>
+      <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Notification panel with vertical timeline</title>
+      <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Work+Sans:500,400,300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/notification.css">
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="notification.js"></script>
+    </head>
+    <body>
+      <div class="header">
+        <a href="#" class="notification-trigger">
+          <i class="ion-android-notifications"></i>
+          <div class='notification-num'>1</div>
+        </a>
+      </div>
+      <div class="panel">
+        <div class="title">Notifications</div>
+        <ul class="notification-bar">
+          <li class="unread">
+            <i class="ion-checkmark"></i>
+            <div> New deal from JD Stores (new)</div>
+          </li>
+          <li>
+            <i class="ion-paper-airplane"></i>
+            <div>New deal from Dominos</div>
+          </li>
+          <li>
+            <i class="ion-plus"></i>
+            <div>First notification</div>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <h1>Check you notifications for the latest deals</h1>
+      
+      </div>
+    </body>
+  </html>
+
+
+
+
   <!-- Banner Hot Deal -->
   <section id="banner">
     <div class="inner">
@@ -42,6 +92,8 @@
       </ul>
     </div>
   </section>
+
+
   <!--Main Content -->
   <div class="content-section content-gray-bg">
     <div class="container">
@@ -62,7 +114,6 @@
 
 
   </div>
-
 <!-- <script>
 $('#checkBox').click(function(e){
   if (e.target.checked) {
