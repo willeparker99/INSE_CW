@@ -72,13 +72,13 @@ h1 {
 .outer-menu {
   position: fixed;
   top: 10vh;
-  right: 0;
+  left: 0;
   z-index: 98;
 }
 .outer-menu .checkbox-toggle {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 99;
   cursor: pointer;
   width: 60px;
@@ -121,7 +121,7 @@ h1 {
 .outer-menu .hamburger {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 98;
   width: 60px;
   height: 60px;
