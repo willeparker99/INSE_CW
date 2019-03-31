@@ -60,7 +60,7 @@ async function createDeals(){
   }
 }
 
-function getFav(usr){
+async function getFav(usr){
   const favList = await fetch("/fav/"+usr);
   const fav = await dealList.json();
   //will complete when log in is complete
