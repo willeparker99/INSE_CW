@@ -7,7 +7,7 @@ function init(){
 }
 
 async function createDeals(){
-  const dealList = await fetch("js/deals.json");
+  const dealList = await fetch("/deals");
   const deals = await dealList.json();
   const row = document.querySelector(".row");
 
@@ -30,7 +30,7 @@ async function createDeals(){
     link.appendChild(text);
   //create img element
     const img = document.createElement("img");
-    img.src = deal.img;
+    img.src = deal.url;
     img.alt = deal.name;
     img.classList = "img-responsive";
     figure.appendChild(img);
@@ -58,6 +58,12 @@ async function createDeals(){
     input.classList = "favButton";
     fav.appendChild(input);
   }
+}
+
+function getFav(usr){
+  const favList = await fetch("/fav/"+usr);
+  const fav = await dealList.json();
+  //will complete when log in is complete
 }
 
 function search(e){
