@@ -1,6 +1,6 @@
 const mysql = require('mysql2/promise');
 const config = require('./dbConf');
-const globalConnection = mysql.createConnection(config.mysql);
+const globalConnection = init();
 
 async function getDeals(res) {
   const myConn = await init();
@@ -20,9 +20,10 @@ module.exports = {
 /*
 connection to db
 */
-let sqlPromise = null;
+
 
 async function init() {
+  let sqlPromise = null;
   if (sqlPromise){
     return sqlPromise;
   }
@@ -30,12 +31,13 @@ async function init() {
   return sqlPromise;
 }
 async function newConnection() {
-  const sql = await mysql.createConnection(config.mysql);
-
-  sql.on('error', (err) => {
-    console.error(err);
-    sql.end();
-  });
+  try{
+    const sql = await mysql.createConnection(config.mysql);
+  }
+  catch(e){
+    console.log("Cannot connect to db \nHave you modified dbConf.json correctly?");
+    return e;
+  }
   return sql;
 }
 async function releaseConnection(connection) {
