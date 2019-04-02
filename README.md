@@ -10,10 +10,15 @@ Willeparker99 = UP861063
 ZakCavill = UP866235  
 CharlieOliverUOP = UP852982  
 
-## Running application
-To run this application node and mysql must be installed
+## Set up application
+To run this application you require a linux terminal with nodejs, npm and mysql installed
+1. to install nodejs `sudo apt-get install nodejs`
+2. to install npm `sudo apt-get install npm`
+3. to install mysql `sudo apt-get install mysql-server`
+4. change password in server/dbConf.json to your mysql password
+
+## run application
 1. install packages: `npm i`
-2. change password in server/dbConf to your mysql password
 3. create database `npm run createDB`
 4. start server: `npm start`
 5. go to browser and go to appropriate ip address
