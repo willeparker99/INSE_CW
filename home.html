@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentDeals</title>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/notificatiion.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.0/jquery.cookie.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/notification.js"></script>
+                          <!-- google signin -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <meta name="google-signin-client_id" content="314609863642-686dboes8rlarjmprl7sha8957eoe8mp.apps.googleusercontent.com">
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+ <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer></script>
+ <script>
+    function start() {
+      gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init({
+          client_id: '314609863642-686dboes8rlarjmprl7sha8957eoe8mp.apps.googleusercontent.com',
+
+        });
+      });
+    }
+  </script>
+  <script>
+    $('#signinButton').click(function() {
+      auth2.grantOfflineAccess().then(signInCallback);
+   });
+ </script>
+                   <!-------------------------------------->
+</head>
+<body>
+
+  <!--navigation bar-->
+  <div class="outer-menu">
+    <input id="checkBox" class="checkbox-toggle" type="checkbox" autocomplete="on"/>
+    <div class="hamburger">
+      <div></div>
+    </div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="home.html">home</a></li>
+            <li> <button id="signinButton">Sign in with Google</button></li>
+            <li><a href="#">register</a></li>
+            <li><a href="#">about</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <html>
+    <head>
+      <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Notification panel with vertical timeline</title>
+      <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Work+Sans:500,400,300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/notification.css">
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="notification.js"></script>
+    </head>
+    <body>
+      <div class="header">
+        <a href="#" class="notification-trigger">
+          <i class="ion-android-notifications"></i>
+          <div class='notification-num'>1</div>
+        </a>
+      </div>
+      <div class="panel">
+        <div class="title">Notifications</div>
+        <ul class="notification-bar">
+          <li class="unread">
+            <i class="ion-checkmark"></i>
+            <div> New deal from JD Stores (new)</div>
+          </li>
+          <li>
+            <i class="ion-paper-airplane"></i>
+            <div>New deal from Dominos</div>
+          </li>
+          <li>
+            <i class="ion-plus"></i>
+            <div>First notification</div>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <h1>Check you notifications for the latest deals</h1>
+
+      </div>
+    </body>
+  </html>
+
+
+
+
+  <!-- Banner Hot Deal -->
+  <section id="banner">
+    <div class="inner">
+      <h1>Hot Deal of the day: <span>Dominos buy 1 get 10 free :D</span></h1>
+      <ul class="actions">
+        <li><a href="#" class="button alt">Get Deal</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!--Main Content -->
+  <div class="content-section content-gray-bg">
+    <div class="container">
+      <!--Search Bar-->
+
+      <input type="text" placeholder="Search.." id="search">
+
+      <div class="row">
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+<!-- <script>
+$('#checkBox').click(function(e){
+  if (e.target.checked) {
+    localStorage.checked = true;
+  } else {
+    localStorage.checked = false;
+  }
+})
+
+$( document ).ready(function() {
+
+  document.querySelector('#checkBox').checked = localStorage.checked;
+
+});
+</script> -->
+
+</body>
+</html>
