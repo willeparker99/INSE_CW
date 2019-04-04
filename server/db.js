@@ -33,12 +33,12 @@ async function init() {
 async function newConnection() {
   try{
     const sql = await mysql.createConnection(config.mysql);
+    return sql;
   }
   catch(e){
     console.log("Cannot connect to db \nHave you modified dbConf.json correctly?");
     return e;
   }
-  return sql;
 }
 async function releaseConnection(connection) {
   await connection.end();
