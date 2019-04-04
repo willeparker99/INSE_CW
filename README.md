@@ -23,7 +23,13 @@ To run this application you require a linux terminal with nodejs, npm and mysql 
 4. start server: `npm start`
 5. go to browser and go to appropriate ip address
 
-## todo:
+## run test
+To run automated test you will require a linux termial see `set up application` above
+1. install packages: `npm i`
+3. create database `npm run createDB`
+4. start test: `npm test`
+
+## todo
 - add authentication
 - add favs
 - share button

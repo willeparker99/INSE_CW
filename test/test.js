@@ -4,35 +4,26 @@ const path = require("path");
 const QUnit = require("qunit");
 
 const serverFile = path.join("../server/sever.js");
-
+const mainjsFile = path.join("../static/js/main.js");
 QUnit.module("Function Checking");
 
 QUnit.test("Has everything compiled correctly",
     function(assert){
         assert.ok(
             //check functions inside main.js
-            typeof createDeals === "function",
+            typeof mainjsFile.createDeals === "function",
             "check if createDeals is a working function."
         );
         assert.ok(
-            typeof init === "function",
+            typeof mainjsFile.init === "function",
             "check if init is a working function."
         );
         assert.ok(
-            typeof init === "function",
-            "check if init is a working function."
-        );
-        assert.ok(
-            typeof shareURL === "function",
+            typeof mainjsFile.shareURL === "function",
             "check if shareURL is a working function."
         );
         assert.ok(
-            typeof serach === "function",
-            "check if search is a working function."
-        );
-        //check functions inside nav.js
-        assert.ok(
-            typeof serach === "function",
+            typeof mainjsFile.serach === "function",
             "check if search is a working function."
         );
     }
