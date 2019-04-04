@@ -57,9 +57,29 @@ async function createDeals(){
     input.type = "checkbox";
     input.classList = "favButton";
     fav.appendChild(input);
+  // Create share button
+    const share = document.createElement("div");
+    const shareIMG_FACEBOOK = document.createElement("img");
+    const shareIMG_TWITTER = document.createElement("img");
+    share.appendChild(shareIMG_FACEBOOK);
+    share.appendChild(shareIMG_TWITTER);
+    shareIMG_FACEBOOK.src = "../img/fb_icon.png";
+    shareIMG_TWITTER.src = "../img/twitter_icon.png";
+    shareIMG_FACEBOOK.style.width = "20px";
+    shareIMG_FACEBOOK.style.height = "20px";
+    shareIMG_FACEBOOK.style.marginLeft = "10px";
+    shareIMG_TWITTER.style.width = "20px";
+    shareIMG_TWITTER.style.height = "20px";
+    shareIMG_TWITTER.style.marginLeft = "10px";
+    share.style.display = "inline-flex";
+    fav.appendChild(share);
+    shareIMG_FACEBOOK.addEventListener("click", function () { shareURL(`http://www.facebook.com/sharer/sharer.php?u=${window.location.href}&t=${deal.name}`)});
+    shareIMG_TWITTER.addEventListener("click", function(){shareURL(`https://www.twitter.com/share?text=I found this amazing deal on&url=${window.location.href}&hashtags=StudentDeals`)})
   }
 }
-
+function shareURL(url){
+  window.open(url);
+}
 async function getFav(usr){
   const favList = await fetch("/fav/"+usr);
   const fav = await dealList.json();
