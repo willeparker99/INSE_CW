@@ -12,7 +12,6 @@ create table if not exists DealsApp.Fav (
   id int primary key auto_increment,
   DealID int,
   user varchar(100),
-  fav boolean,
   foreign key (DealID) references Deal(id)
 );
 
