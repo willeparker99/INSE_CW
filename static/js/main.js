@@ -1,15 +1,24 @@
 window.addEventListener('load', init);
 function init(){
   //event listener to happen on any change of search bar
-  document.querySelector("#search").addEventListener('input',search);
+  document.querySelector("#search").addEventListener("input",search);
   //create deals
   createDeals();
 }
-
+function onSignIn(googleUser) {
+  const profile = googleUser.getBasicProfile();
+  localStorage.setItem("googleID",profile.getId());
+}
+// function test(){
+//   return localStorage.getItem("googleID");
+// }
 async function createDeals(){
   const dealList = await fetch("/deals");
   const deals = await dealList.json();
+  const favList = await fetch(`/fav/${localStorage.getItem("googleID")}`);
+  const savedFav = await favList.json();
   const row = document.querySelector(".row");
+
 
   for (deal of deals){
   //create containter
@@ -17,10 +26,11 @@ async function createDeals(){
     container.classList = "col-lg-4 col-md-4 col-sm-6";
     row.appendChild(container);
   //creater anchor element
-    const link = document.createElement("a");
-    link.href = deal.link;
+    const link = document.createElement("div");
+    //link.href = deal.link;
     link.classList = `deal-item ${deal.id} animated fadeInDown`
     container.appendChild(link);
+
   //create figure element
     const figure = document.createElement("figure");
     link.appendChild(figure);
@@ -44,18 +54,28 @@ async function createDeals(){
     discount.textContent = `${deal.discountFrom}% - ${deal.discountTo}%`;
     text.appendChild(discount);
   //creaete div for favourite feature
-    const fav = document.createElement("div");
+    const fav = document.createElement("form");
+    fav.id = `deal${deal.id}`;
     fav.classList = "fav";
+    fav.action = "/favUp";
+    fav.method = "post";
     text.appendChild(fav);
   //create p element for favourite label
-    const para = document.createElement("p");
-    para.textContent = "Favourite:"
-    para.classList = "";
-    fav.appendChild(para);
+    const lab = document.createElement("label");
+    lab.textContent = "Favourite:"
+    fav.appendChild(lab);
   //create input for favourite feature
     const input = document.createElement("input");
+    for (item of savedFav){
+      console.log(item.DealID,deal.id);
+      if (item.DealID == deal.id){
+        input.checked = true;
+      }
+    }
     input.type = "checkbox";
     input.classList = "favButton";
+    input.id = deal.id;
+    input.addEventListener("change",favouriteItem);
     fav.appendChild(input);
   // Create share button
     const share = document.createElement("div");
@@ -80,10 +100,24 @@ async function createDeals(){
 function shareURL(url){
   window.open(url);
 }
-async function getFav(usr){
-  const favList = await fetch("/fav/"+usr);
+async function getFav(){
+  if (localStorage.getItem("googleID")){
+    const favList = await fetch("/fav/"+usr);
+  }
+
   const fav = await dealList.json();
-  //will complete when log in is complete
+
+}
+async function favouriteItem(e){
+  if (localStorage.getItem("googleID")){
+    if (e.target.checked){
+      window.location.href = `/upFav/${localStorage.getItem("googleID")}/${e.target.id}`;
+    }
+    else{
+      console.log("remove");
+      window.location.href = `/remFav/${localStorage.getItem("googleID")}/${e.target.id}`;
+    }
+  }
 }
 
 function search(e){
