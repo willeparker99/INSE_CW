@@ -4,7 +4,7 @@
   "description": "A student deals app",
   "main": "server/server.js",
   "scripts": {
-    "test": "null",
+    "test": "test/test.js",
     "start": "node server/server",
     "createDB": "mysql -u root -p < server/createDB.sql"
   },
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/willeparker99/INSE_CW#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "mysql2": "^1.6.5"
+    "mysql2": "^1.6.5",
+    "qunit": "^2.9.2"
   }
 }
