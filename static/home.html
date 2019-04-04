@@ -13,6 +13,27 @@
   <script type="text/javascript" src="js/main.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/notification.js"></script>
+                            <!-- google signin -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <meta name="google-signin-client_id" content="314609863642-686dboes8rlarjmprl7sha8957eoe8mp.apps.googleusercontent.com">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer></script>
+  <script>
+    function start() {
+      gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init({
+          client_id: '314609863642-686dboes8rlarjmprl7sha8957eoe8mp.apps.googleusercontent.com',
+
+        });
+      });
+    }
+  </script>
+  <script>
+    $('#signinButton').click(function() {
+      auth2.grantOfflineAccess().then(signInCallback);
+    });
+  </script>
+                <!---------------------------------------------------->
 </head>
 <body>
 
@@ -27,7 +48,7 @@
         <div>
           <ul>
             <li><a href="home.html">home</a></li>
-            <li><a href="#">login</a></li>
+            <li><button id="signinButton">Sign in with Google</button></li>
             <li><a href="#">register</a></li>
             <li><a href="#">about</a></li>
           </ul>
@@ -75,7 +96,7 @@
       </div>
       <div class="content">
         <h1>Check you notifications for the latest deals</h1>
-      
+
       </div>
     </body>
   </html>
