@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-signin-client_id" content="314609863642-686dboes8rlarjmprl7sha8957eoe8mp.apps.googleusercontent.com">
+  <link rel="stylesheet" href="css/login.css">
+  <script> let code = JSON.parse(credentials.JSO); </script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+  </script>
+  <script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
+  </script>
+  <!-- <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="js/auth.js"></script> -->
+  <script>
+     function start() {
+       gapi.load('auth2', function() {
+         auth2 = gapi.auth2.init({
+           client_id: '314609863642-686dboes8rlarjmprl7sha8957eoe8mp.apps.googleusercontent.com',
+
+         });
+       });
+     }
+   </script>
+
+  <title>Login</title>
+  </head>
+  <body>
+               <!-- creates google login button -->
+   <button id="signinButton">Sign in with Google</button>
+     <script>
+       $('#signinButton').click(function() {
+         auth2.grantOfflineAccess().then(signInCallback);
+       });
+    </script>
+
+    <script>
+    function signInCallback(authResult) {
+      if (authResult['code']) {
+
+
+        $('#signinButton').attr('style', 'display: none');
+
+        // Send the code to the server
+        $.ajax({
+          type: 'POST',
+          url: 'http://example.com/storeauthcode',
+          // Always include an `X-Requested-With` header in every AJAX request,
+          // to protect against CSRF attacks.
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+          },
+          contentType: 'application/octet-stream; charset=utf-8',
+          success: function(result) {
+            // Handle or verify the server response.
+          },
+          processData: false,
+          data: authResult['code']
+        });
+      } else {
+        // There was an error.
+      }
+    }
+    </script>
+
+
+
+  </body>
